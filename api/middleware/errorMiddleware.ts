@@ -2,6 +2,8 @@ import { Request, Response, NextFunction } from 'express';
 import { Error } from 'mongoose';
 import dotenv from 'dotenv';
 
+// @Ratchet7x5: TODO: Remove mongoose dependency here. 
+
 dotenv.config();
 
 const notFound = (req: Request, res: Response, next: NextFunction): void => {
