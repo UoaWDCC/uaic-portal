@@ -1,4 +1,4 @@
-import { users } from "../schemas/User";
+import { users } from "../schemas/user";
 import { db } from "../db/config/db";
 import { User } from "../types/types";
 
