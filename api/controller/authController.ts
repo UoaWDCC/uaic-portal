@@ -3,7 +3,6 @@ import asyncHandler from "../middleware/asyncHandler";
 
 import { db } from "../db/config/db";
 import { users } from "../schemas/user";
-import { sql } from "drizzle-orm";
 
 export const signUp = asyncHandler(async (req: Request, res: Response) => {
   throw new Error("Not implemented yet");
@@ -21,13 +20,14 @@ export const clerkSignUp = asyncHandler(async (req: Request, res: Response) => {
     const newUser = await db
       .insert(users)
       .values({
+        // insert some default values
+        name: null, 
         email,
-        university_id: "", // default value
-        upi: "", // default value
-        institution: "Unknown", // default value
-        year_of_study: "Unknown", // default value
-        study_field: "", // default value
-        name: "Unknown", // default value
+        year_of_study: null, 
+        university_id: null, 
+        upi: null, 
+        institution: null, 
+        study_field: null, 
         is_admin: false,
         is_paid: false,
         is_info_confirmed: false,
