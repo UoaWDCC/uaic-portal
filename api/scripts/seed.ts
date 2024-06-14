@@ -4,13 +4,14 @@ import { db } from "../db/config/db";
 const main = async () => {
   try {
     console.log("Seeding database");
+    // @Ratchet7x5 TODO: Drop all tables
     // Delete all data
     await db.delete(users);
     await db.insert(users).values([
       {
         name: "Harsheel Singh",
         email: "hsin212@aucklanduni.ac.nz",
-        year_of_study: 4,
+        year_of_study: "4",
         university_id: "12345",
         upi: "hsin212",
         institution: "UoA",
@@ -24,7 +25,7 @@ const main = async () => {
       {
         name: "Guryash Matharu",
         email: "gmat222@aucklanduni.ac.nz",
-        year_of_study: 4,
+        year_of_study: "4",
         university_id: "23456",
         upi: "gmat222",
         institution: "UoGOAT",
