@@ -35,20 +35,21 @@ const main = async () => {
         created_at: new Date(),
         membership_expiry: null,
       },
+      // Keep Naren's data barebones (for testing reasons)
       {
-        name: "Naren Rohan",
+        name: null,
         email: "nroh555@aucklanduni.ac.nz",
-        year_of_study: 4,
-        university_id: "",
-        upi: "",
-        institution: "",
-        study_field: "SOFTENG",
+        year_of_study: null,
+        university_id: null,
+        upi: null,
+        institution: null,
+        study_field: null,
         is_admin: true,
         is_paid: true,
         is_info_confirmed: false,
         created_at: new Date(),
         membership_expiry: null,
-      }
+      },
     ]);
     process.exit(0);
   } catch (error) {
