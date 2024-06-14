@@ -1,6 +1,5 @@
 import express, { json } from "express";
 import cors from "cors";
-import { connect } from "mongoose";
 import { config } from "dotenv";
 
 // Import Routers
