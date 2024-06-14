@@ -7,7 +7,7 @@ export const events = pgTable('events', {
   description: text('description').notNull(),
   location: varchar('location', { length: 255 }).notNull(),
   event_date: timestamp('event_date').notNull(),
-  event_time: time('event_time'),
+  event_time: time('event_time', { withTimezone: false }),
   tickets_total: integer('tickets_total').notNull(),
   max_tickets_per_user: integer('max_tickets_per_user').default(1),
   is_confirmed: boolean('is_confirmed').default(false),
