@@ -1,12 +1,16 @@
 import { users } from "../schemas/user";
+import events from "../db/sampleEvents";
+import { tickets } from "../schemas/tickets";
+
 import { db } from "../db/config/db";
 
 const main = async () => {
   try {
     console.log("Seeding database");
-    // @Ratchet7x5 TODO: Drop all tables
     // Delete all data
     await db.delete(users);
+
+    //insert fake data
     await db.insert(users).values([
       {
         name: "Harsheel Singh",
