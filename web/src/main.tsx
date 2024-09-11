@@ -24,6 +24,7 @@ import SignInScreen from "./screens/SignInScreen.tsx";
 import EventScreen from "./screens/EventScreen.tsx";
 import PartnersScreen from "./screens/PartnersScreen.tsx";
 import AboutUsSCreen from "./screens/AboutUsScreen.tsx";
+import DetailedEventScreen from "./screens/DetailedEventScreen.tsx";
 
 //Add any routes for screens below
 const router = createBrowserRouter(
@@ -32,6 +33,7 @@ const router = createBrowserRouter(
       <Route index={true} element={<HomeScreen />} />
       <Route path="/test" element={<TestScreen />} />
       <Route path="/events" element={<EventScreen />} />
+      <Route path="/events/:id" element={<DetailedEventScreen />} />
       <Route path="/credits" element={<CreditsScreen />} />
       <Route path="/exec" element={<ExecScreen />} />
       <Route path="/sponsors" element={<PartnersScreen />} />

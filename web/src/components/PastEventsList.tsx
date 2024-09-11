@@ -1,4 +1,4 @@
-import SimpleSlider from "./EventSlider";
+import EventSlider from "./EventSlider";
 import PastEventCard from "./PastEventCard";
 import { Event } from "../types/types";
 import { Link } from "react-router-dom";
@@ -9,15 +9,15 @@ interface PastEventsListProps {
 
 const PastEventsList: React.FC<PastEventsListProps> = ({ pastEvents }) => {
   return (
-    <SimpleSlider cardType="past">
+    <EventSlider cardType="past">
       {pastEvents.map((event, index) => (
         <div key={index} className="p-2 hover:cursor-pointer">
-          <Link to={`/events/${event.id}`}>
+          <Link to={`/events/${event.id}`} state={{ event }}>
             <PastEventCard pastEvent={event} />
           </Link>
         </div>
       ))}
-    </SimpleSlider>
+    </EventSlider>
   );
 };
 
