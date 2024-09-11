@@ -15,7 +15,7 @@ const UpcomingEventsList: React.FC<UpcomingEventsListProps> = ({
       <EventSlider cardType="upcoming">
         {upcomingEvents.map((event) => (
           <div key={event.id} className="p-2 hover:cursor-pointer">
-            <Link to={`/events/${event.id}`}>
+            <Link to={`/events/${event.id}`} state={{ event }}>
               <UpcomingEventCard upcomingEvent={event} />
             </Link>
           </div>
