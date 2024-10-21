@@ -55,7 +55,7 @@ const queryClient = new QueryClient();
 const root = document.getElementById("root") as HTMLElement;
 
 ReactDOM.createRoot(root).render(
-  <React.StrictMode>
+  // <React.StrictMode>
     <ClerkProvider publishableKey={PUBLISHABLE_KEY}>
       <ApolloProvider client={graphqlClient}>
         <QueryClientProvider client={queryClient}>
@@ -63,5 +63,5 @@ ReactDOM.createRoot(root).render(
         </QueryClientProvider>
       </ApolloProvider>
     </ClerkProvider>
-  </React.StrictMode>
+  // </React.StrictMode>
 );
