@@ -67,5 +67,6 @@ ReactDOM.createRoot(root).render(
         </QueryClientProvider>
       </ApolloProvider>
     </ClerkProvider>
-  // </React.StrictMode>
+    //{" "}
+  </React.StrictMode>
 );

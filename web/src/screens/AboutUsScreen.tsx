@@ -74,9 +74,9 @@ export default function AboutUsScreen() {
   }, [introLoading, valuesLoading, partnersLoading]);
 
   if (introError || valuesError || partnersError) {
-    console.log(introError)
-    console.log(valuesError)
-    console.log(partnersError)
+    console.log(introError);
+    console.log(valuesError);
+    console.log(partnersError);
     return <div>CMS Offline</div>;
   }
 
