@@ -56,12 +56,12 @@ const root = document.getElementById("root") as HTMLElement;
 
 ReactDOM.createRoot(root).render(
   // <React.StrictMode>
-    <ClerkProvider publishableKey={PUBLISHABLE_KEY}>
-      <ApolloProvider client={graphqlClient}>
-        <QueryClientProvider client={queryClient}>
-          <RouterProvider router={router} />
-        </QueryClientProvider>
-      </ApolloProvider>
-    </ClerkProvider>
+  <ClerkProvider publishableKey={PUBLISHABLE_KEY}>
+    <ApolloProvider client={graphqlClient}>
+      <QueryClientProvider client={queryClient}>
+        <RouterProvider router={router} />
+      </QueryClientProvider>
+    </ApolloProvider>
+  </ClerkProvider>
   // </React.StrictMode>
 );
