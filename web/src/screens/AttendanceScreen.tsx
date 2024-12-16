@@ -231,7 +231,7 @@ export default function AttendanceScreen({ navbar }: { navbar: JSX.Element }) {
           Attendance: {totalCheckedIn} {" / "} {totalAttendees}
         </p>
         <div className="flex items-center justify-center">
-          <div className="w-[40rem] pb-10 px-3">
+          <div className="w-[40rem] px-3 pb-10">
             <p className="text-center text-lg text-white">
               Select the camera you wish to use
             </p>
