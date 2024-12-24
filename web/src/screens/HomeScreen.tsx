@@ -43,7 +43,7 @@ export default function HomeScreen({ navbar }: { navbar: JSX.Element }) {
     if (eventsData) {
       try {
         const mappedEvents = Mapper.mapToEventsSlider(eventsData);
-        console.log(mappedEvents)
+        console.log(mappedEvents);
         setEvents(mappedEvents);
       } catch (error) {
         setErrorEvents(true);
@@ -93,7 +93,7 @@ export default function HomeScreen({ navbar }: { navbar: JSX.Element }) {
               pastEvent={false}
             />
           </div>
-          <div className=" bg-red-500">
+          <div className="bg-red-500">
             <SomePhotos photos={photos} noPhotos={errorPhotos} />
           </div>
         </div>

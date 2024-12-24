@@ -38,10 +38,7 @@ export class Mapper {
   }
 
   static mapToPartnerImage(data: any): PartnerImage[] {
-    if (
-      !data.partners ||
-      data.partners.length === 0
-    ) {
+    if (!data.partners || data.partners.length === 0) {
       throw new NoDataError("No data");
     } else {
       return data.partners.map((item: any) => {
@@ -57,10 +54,7 @@ export class Mapper {
   }
 
   static mapToPartner(data: any): Partner[] {
-    if (
-      !data.partners ||
-      data.partners.length === 0
-    ) {
+    if (!data.partners || data.partners.length === 0) {
       throw new NoDataError("No data");
     } else {
       return data.partners.map((item: any) => {
@@ -80,16 +74,13 @@ export class Mapper {
   }
 
   static mapToSomePhotos(data: any): SomePhoto[] {
-    if (
-      !data.somePhotos ||
-      data.somePhotos.length === 0
-    ) {
+    if (!data.somePhotos || data.somePhotos.length === 0) {
       throw new NoDataError("No data");
     } else {
       return data.somePhotos.map((item: any) => {
         const attributes = item.data.attributes || {};
         const imageUrl = attributes.Image?.data?.attributes?.url || "";
-        console.log(item.data.id)
+        console.log(item.data.id);
         return {
           id: item.data.id,
           title: attributes.Title || "",
@@ -119,10 +110,7 @@ export class Mapper {
   }
 
   static mapToIntroduction(data: any): Introduction[] {
-    if (
-      !data.introductions ||
-      data.introductions.length === 0
-    ) {
+    if (!data.introductions || data.introductions.length === 0) {
       throw new NoDataError("No data");
     } else {
       return data.introductions.map((item: any) => {
@@ -138,10 +126,7 @@ export class Mapper {
   }
 
   static mapToPreviousTeams(data: any): PreviousTeam[] {
-    if (
-      !data.previousTeams ||
-      data.previousTeams.length === 0
-    ) {
+    if (!data.previousTeams || data.previousTeams.length === 0) {
       throw new NoDataError("No data");
     } else {
       return data.previousTeams.map((item: any) => {
@@ -179,7 +164,7 @@ export class Mapper {
     if (!data.event || data.event.length === 0) {
       throw new NoDataError("No data");
     } else {
-      console.log(data.event)
+      console.log(data.event);
       const attributes = data.event.data.attributes || {};
       const imageUrl = attributes.Image?.data?.attributes?.url || "";
       return {
@@ -234,10 +219,7 @@ export class Mapper {
   }
 
   static mapToEventsGallery(data: any): EventGallery[] {
-    if (
-      !data.eventGalleries ||
-      data.eventGalleries.length === 0
-    ) {
+    if (!data.eventGalleries || data.eventGalleries.length === 0) {
       throw new NoDataError("No data");
     } else {
       return data.eventGalleries.map((item: any) => {
