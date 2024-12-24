@@ -15,8 +15,8 @@ export default function EventList({
   pastEvent,
 }: EventsListProps) {
   const navigate = useNavigate();
-  function handleOnClick(id: number) {
-    if (id > 0) {
+  function handleOnClick(id: string) {
+    if (id !== "-1") {
       navigate(`/events/${id}`);
     }
   }

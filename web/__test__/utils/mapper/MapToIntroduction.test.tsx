@@ -6,9 +6,9 @@ import { NoDataError } from "../../../src/classes/NoDataError";
 describe("mapToIntroduction", () => {
   it("should map valid data correctly", () => {
     const data = {
-      introductions: {
-        data: [
-          {
+      introductions: [
+        {
+          data: {
             attributes: {
               Description: "Introduction description",
               Events: "Upcoming events",
@@ -16,8 +16,8 @@ describe("mapToIntroduction", () => {
               Followers: "Followers count",
             },
           },
-        ],
-      },
+        },
+      ],
     };
 
     const expected: Introduction[] = [
@@ -34,13 +34,13 @@ describe("mapToIntroduction", () => {
 
   it("should handle missing fields gracefully", () => {
     const data = {
-      introductions: {
-        data: [
-          {
+      introductions: [
+        {
+          data: {
             attributes: null,
           },
-        ],
-      },
+        },
+      ],
     };
 
     const expected: Introduction[] = [
@@ -57,9 +57,9 @@ describe("mapToIntroduction", () => {
 
   it("should handle null description field gracefully", () => {
     const data = {
-      introductions: {
-        data: [
-          {
+      introductions: [
+        {
+          data: {
             attributes: {
               Description: null,
               Events: "Upcoming events",
@@ -67,8 +67,8 @@ describe("mapToIntroduction", () => {
               Followers: "Followers count",
             },
           },
-        ],
-      },
+        },
+      ],
     };
 
     const expected: Introduction[] = [
@@ -85,9 +85,9 @@ describe("mapToIntroduction", () => {
 
   it("should handle null events field gracefully", () => {
     const data = {
-      introductions: {
-        data: [
-          {
+      introductions: [
+        {
+          data: {
             attributes: {
               Description: "Introduction description",
               Events: null,
@@ -95,8 +95,8 @@ describe("mapToIntroduction", () => {
               Followers: "Followers count",
             },
           },
-        ],
-      },
+        },
+      ],
     };
 
     const expected: Introduction[] = [
@@ -113,9 +113,9 @@ describe("mapToIntroduction", () => {
 
   it("should handle null members field gracefully", () => {
     const data = {
-      introductions: {
-        data: [
-          {
+      introductions: [
+        {
+          data: {
             attributes: {
               Description: "Introduction description",
               Events: "Upcoming events",
@@ -123,8 +123,8 @@ describe("mapToIntroduction", () => {
               Followers: "Followers count",
             },
           },
-        ],
-      },
+        },
+      ],
     };
 
     const expected: Introduction[] = [
@@ -141,9 +141,9 @@ describe("mapToIntroduction", () => {
 
   it("should handle null followers field gracefully", () => {
     const data = {
-      introductions: {
-        data: [
-          {
+      introductions: [
+        {
+          data: {
             attributes: {
               Description: "Introduction description",
               Events: "Upcoming events",
@@ -151,8 +151,8 @@ describe("mapToIntroduction", () => {
               Followers: null,
             },
           },
-        ],
-      },
+        },
+      ],
     };
 
     const expected: Introduction[] = [
@@ -169,13 +169,13 @@ describe("mapToIntroduction", () => {
 
   it("should handle completely missing attributes gracefully", () => {
     const data = {
-      introductions: {
-        data: [
-          {
+      introductions: [
+        {
+          data: {
             attributes: null,
           },
-        ],
-      },
+        },
+      ],
     };
 
     const expected: Introduction[] = [
@@ -191,9 +191,7 @@ describe("mapToIntroduction", () => {
   });
   it("should throw NoDataError when introductions.data is empty", () => {
     const data = {
-      introductions: {
-        data: [],
-      },
+      introductions: [],
     };
 
     expect(() => Mapper.mapToIntroduction(data)).toThrow(NoDataError);

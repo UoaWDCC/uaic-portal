@@ -51,7 +51,7 @@ export interface PreviousTeam {
 }
 
 export interface EventsSlider {
-  id: number;
+  id: string;
   title: string;
   location: string;
   eventDateStart: string;

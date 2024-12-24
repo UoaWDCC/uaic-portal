@@ -23,6 +23,8 @@ module.exports = ({ env }) => ({
       apolloServer: {
         tracing: false,
       },
+      v4CompatibilityMode: true,
     },
   },
+  'import-export-entries': {}
 });

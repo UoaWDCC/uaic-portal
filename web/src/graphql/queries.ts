@@ -106,7 +106,7 @@ export const GET_VALUES = gql`
   query {
     values {
       data {
-        id
+        documentId
         attributes {
           Title
           Description
@@ -142,7 +142,7 @@ export const GET_EVENTS_SLIDER = gql`
   query {
     events {
       data {
-        id
+        documentId
         attributes {
           Title
           Location
@@ -199,11 +199,10 @@ export const GET_PURCHASEABLE_MEMBERSHIPS = gql`
   }
 `;
 
-export function getEventById({ id }: { id: number }) {
-  id.toString();
+export function getEventById({ id }: { id: string }) {
   return gql`
   query {
-    event(id:${id}) {
+    event(documentId:"${id}") {
       data {
         id
         attributes {
@@ -225,7 +224,7 @@ export function getEventById({ id }: { id: number }) {
           }
           Ticket_ID{
             data{
-              id
+              documentId
               attributes{
                 Name
                 Price
@@ -244,15 +243,15 @@ export function getEventById({ id }: { id: number }) {
         }
       }
     }
-  }
+}
+  
 `;
 }
 
-export function getTicketQuestions({ id }: { id: number }) {
-  id.toString();
+export function getTicketQuestions({ id }: { id: string }) {
   return gql`
     query {
-      ticket(id:${id}) {
+      ticket(documentId:"${id}") {
         data {
           id
           attributes {

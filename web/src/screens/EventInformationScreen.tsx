@@ -20,10 +20,10 @@ export default function EventInformationScreen({
   navbar: JSX.Element;
 }) {
   // event id handling
-  let queryId = -1;
+  let queryId = "-1";
   const { id } = useParams();
   if (id !== undefined) {
-    queryId = parseInt(id);
+    queryId = id;
   }
 
   // Queries
